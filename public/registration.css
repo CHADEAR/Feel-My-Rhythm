@@ -15,15 +15,15 @@ section#reg {
 
 section#reg aside{
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 40px;
+    padding: 20px;
     border-radius: 30px;
-    width: 400px;
+    width: 500px;
     border: rgba(255, 255, 255, 0.4) solid thin;
     box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
 }
 
 section#reg aside h1 {
-    font-size: 45px;
+    font-size: 50px;
     color: #333;
     text-align: center;
     font-weight: 600;
@@ -34,7 +34,7 @@ section#reg aside h3 {
     margin-top: 20px;
     margin-bottom: 0;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     color: #5f5f5f;
 }
@@ -47,15 +47,29 @@ section#reg aside h3 a {
 
 .twinBox {
     display: flex;
+    text-align: center;
+}
+
+.twinBox2 {
+    display: flex;
+    text-align: center;
 }
 
 .formGroup {
-    margin: 10px 0;
-    border-bottom: #7f6cef solid 1px;
+    margin: 10px 15px;
     padding: 8px 10px;
+    border-bottom: #7f6cef solid 0.5px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+}
+
+.formGroup.invalid {
+    border-bottom-color: #ff0296 ;
+}
+
+.formGroup.valid {
+    border-bottom-color: #47b101 ;
 }
 
 .formGroup svg{
@@ -68,13 +82,33 @@ section#reg aside h3 a {
     fill: #7f6cef;
 }
 
-.formGroup svg path.nofill {
+.formGroup svg path.noFill {
+    fill: none;
+}
+
+.formGroup.invalid svg path,
+.formGroup.invalid svg circle {
+    fill: #ff0296;
+}
+
+.formGroup.invalid svg path.noFill {
+    fill: none;
+}
+
+.formGroup.valid svg path,
+.formGroup.valid svg circle {
+    fill: #47b101;
+}
+
+.formGroup.valid svg path.noFill {
     fill: none;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="date"],
+input[type="tel"] {
     width: 100%;
     font-size: 16px;
     border: none;
@@ -83,16 +117,17 @@ input[type="password"] {
 }
 
 button[type="submit"] {
-    width: 100%;
+    width: 50%;
     border: none;
-    padding: 10px 0;
+    padding: 7px 0;
     cursor: pointer;
-    margin-top: 15px;
-    border-radius: 3px;
-    font-weight: 400;
+    margin-top: 16px;
+    border-radius: 20px;
+    font-weight: 500;
     font-size: 18px;
     color: #fff;
     background: linear-gradient(230deg, #f902ff, #7f6cef);
+    margin-left: 25%;
 }
 
 
