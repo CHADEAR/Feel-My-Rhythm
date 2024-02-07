@@ -56,19 +56,15 @@
 }
 
 .logoutbox{
-    width: 4rem;
-    height: 2rem;
+    /* width: 4rem;
+    height: 2rem; */
     border-radius: 12px;
     background-color: #EEF5FF;
     margin-right: 2.7rem;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.logoutbox span{
-    font-size: 13px;
-}
+} 
 
 .maincon{
     width: 100%;
@@ -106,12 +102,12 @@
     margin-top: 15px;
 }
 
-.con1-box1 .new-device-box{
+/* .con1-box1 .new-device-box{
     padding: 10px;
     position: absolute;
     margin-left: 70%;
     margin-top: 110px;
-}
+} */
 .con1-box1 button{
     padding: 2px;
 }
@@ -148,7 +144,7 @@
 .content2{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1.5fr 2fr;
 }
 
 .con2-box1{
@@ -166,7 +162,7 @@
     justify-content: center;
 }
 
-.con2-box1 .item-device-box{
+/* .con2-box1 .item-device-box{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -176,15 +172,14 @@
 
 .con2-box1 .item-device-box i{
     font-size: 1.5rem;
-}
+} */
 
 
 
 .con2-box2{
     width: 90%;
     height: 82%;
-    background-color: #94b8e8a1;
-    margin-top: 20px;
+    background-color: #94b8e8a1;  
     border-radius: 12px;
     display: flex;
     padding: 10%;
@@ -196,7 +191,7 @@
     align-items: center;
     margin-left: 10px;
     white-space: pre-wrap;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .content3{
