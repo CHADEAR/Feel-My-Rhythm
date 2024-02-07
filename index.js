@@ -1,14 +1,14 @@
 const express = require('express')
 const app = express()
 const ejs = require('ejs')
-const mongoose = require('mongoose')
+// const mongoose = require('mongoose')
 const expressSession = require('express-session')
 const flash = require('connect-flash')
 
-//MongoDB Connection
-mongoose.connect('mongodb+srv://admin:0145@cluster0.cmr9s9b.mongodb.net/?retryWrites=true&w=majority' , {
-    useNewUrlParser: true
-})
+// //MongoDB Connection
+// mongoose.connect('mongodb+srv://admin:0145@cluster0.cmr9s9b.mongodb.net/?retryWrites=true&w=majority' , {
+//     useNewUrlParser: true
+// })
 
 global.loggedIn = null
 
