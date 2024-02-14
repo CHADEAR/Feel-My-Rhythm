@@ -7,7 +7,7 @@
     font-family: 'Roboto Mono', monospace;
     text-decoration: none;
     list-style: none;
-    color: rgb(81, 79, 79);
+    
 }
 
 .navbar-border{
@@ -18,14 +18,14 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color:#94b8e8;
+    background-image: linear-gradient(90deg, rgb(128, 181, 255), rgb(158, 110, 222) 45%, rgb(209, 91, 230) 98%), linear-gradient(90deg, rgba(103, 126, 250, 1), rgba(142, 84, 219, 1) 45%, rgba(199, 84, 219, 1) 98%);
 }
 
 
 .login-border{
     width: 7%;
     height: 6vh;
-    background-color: whitesmoke;
+    background-color: #fff;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -33,11 +33,14 @@
 
 }
 
+a{
+    color: #473272;
+}
 
 .search-border{
     width: 13%;
     height: 6vh;
-    background-color: #F8E9A1;
+    background-color: #EEF5FF;
     border-radius: 30px;
     display: flex;
     align-items: center;

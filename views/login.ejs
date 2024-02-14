@@ -10,37 +10,38 @@
 
 </head>
 <body>
-    <form action="/login" method="post">
-    <%- include('navbar') %>
-        <div class="login-popup">
-            <div class="loginpage">
-                <div class="welcomeborder">
-                    <h1>Welcome!</h1>
-                    <p>Please Login first</p>
-                </div>
-                    <div class="login-pwborder">
-                        <h1>Login</h1>
-                        <div class="inputborder">
-                            <input type="text" required>
-                            <label>username</label>
-                            <i class="fa-solid fa-person"></i>
+    <div class="cont">
+        <form action="/login" method="post">
+            <!-- <%- include('navbar') %> -->
+                <div class="login-popup">
+                    <div class="loginpage">
+                        <div class="welcomeborder" >
+                            <h1>Welcome Back!</h1>
+                            <p>Please log in using your personal <br>information to stay connected.</p>
                         </div>
-                        <div class="inputborder">
-                            <input type="password" required>
-                            <label>password</label>
-                        </div>
-                        <a href="#" >Forgot Password ?</a>                        
-                        <div class="submitborder">
-                            <button type="submit">Login</button></div>
-                        <div class="signupbox">
-                            <label>Don't have an account ?</label>
-                            <a href="#">Signup</a>
-                        </div> 
-                    </div>        
-
-            </div>
-        </div>      
-    </form>   
+                            <div class="login-pwborder">
+                                <h1>Login</h1>
+                                <div class="inputborder">
+                                    <input type="text" required>
+                                    <label>username</label>
+                                </div>
+                                <div class="inputborder">
+                                    <input type="password" required>
+                                    <label>password</label>
+                                </div>
+                                <a href="#" >Forgot Password ?</a>                        
+                                <div class="submitborder">
+                                    <button type="submit">Login</button></div>
+                                <div class="signupbox">
+                                    <label>Don't have an account ?</label>
+                                    <a href="/">Signup</a>
+                                </div> 
+                            </div>        
+        
+                    </div>
+                </div>      
+            </form>
+    </div>   
 </body>
 </html>
 
