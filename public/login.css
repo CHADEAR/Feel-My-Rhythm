@@ -14,11 +14,37 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: lightgoldenrodyellow;
+}
+
+.cont {
+    /* background-image: url("https://firebasestorage.googleapis.com/v0/b/teamproject-webheartrate.appspot.com/o/bg-img6.jpg?alt=media&token=fc498101-48ea-41c5-96a4-84d4a3660f2d"); */
+    background: linear-gradient(230deg, #f902ff, #00dbdf);
+    /* background-size: cover; */
+    height: 100vh;
+    width: 100%;
+}
+
+.welcomeborder{
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/teamproject-webheartrate.appspot.com/o/sign-in3.jpg?alt=media&token=5b2aa7d5-1037-4a47-97b4-9f985a6ce1f4');  
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    width: 72%;
+    border-radius: 18px 0px 0px 18px;
+    margin-right: 1px;
+}
+
+.welcomeborder h1{
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.welcomeborder p{
+    margin-top: 5px;
+    margin-left: 52px;
 }
 
 .loginpage{
-   
     display: flex;
     flex-direction: row;
     justify-content: space-around;    
@@ -29,25 +55,28 @@ body {
     top: 50%;
     left: 50%;
     display: flex;
-    height: 60vh;
+    height: 80vh;
     width: 60%;
-    margin-top: 10px;
-    max-width: 720px;
-    background: #F8E9A1;
-    padding: 50px;   
+    /* margin-top: 10px; */
+    /* max-width: 720px; */
+    /* padding: 50px;    */
     border-radius: 30px;
     transform: translate(-50%, -50%);
+    background:  rgba(255, 255, 255, 0.936);
+    border: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.5);
 }
 
 .login-popup .login-pwborder {
     display: flex;
     padding: 70px;
+    margin-left: 40px;
     flex-direction: column;  
     justify-content: space-around;
 }
 
 form .inputborder{
-    width: 100%;
+    width: 140%;
     height: 70px;
     padding: 20px;
     margin-top: 15px;
@@ -55,7 +84,7 @@ form .inputborder{
     border-radius: 30px;
     display: flex;    
     flex-direction: row;
-    background-color:#F76C6C;
+    background-color:#d3e0ff;
     align-items: center;
 }
 
@@ -75,7 +104,8 @@ form .inputborder label {
     transform: translateY(-50%);
     left: 30px;
     pointer-events: none;
-    transition: 0.4s ease;   
+    transition: 0.4s ease; 
+     
 }
 
 .inputborder input:is(:focus, :valid) ~ label {
@@ -87,22 +117,30 @@ button {
     border: none;
     outline: none;
     background: none;
-    width: 100%;
+    width: 90%;
     height: 40px;
     margin-top: 15px;
-    background-color: whitesmoke;
+    margin-left: 55px;
+    background: linear-gradient(230deg, #f902ff, #00dbdf);
     border-radius: 30px;
     cursor: pointer;
-    align-items: center;    
+    align-items: center;
+    color: aliceblue;    
 }
 
 .login-pwborder a {
     text-decoration: underline;
-    font-size: 0.7rem;
-    margin-top: 15px;
+    font-size: 0.7rem;  
+    margin-left: 15px;
 }
 
 .signupbox label {
     font-size: 0.7rem;
     text-align: center;
+    margin-left: 37px;
 }
+
+.signupbox{
+    width: 155%;
+}
+
