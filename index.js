@@ -26,12 +26,12 @@ app.get('/home', homeController)
 app.get('/about', (_req,res) => {
     res.render('aboutUs');
   });
-  
+
 app.post('/about', (_req,res) => {
     res.redirect('/');
 });
   
 // app.get('/about', aboutController)
-app.listen(8000, () =>{
-    console.log("App listening on port 8000")
+app.listen(4000, () =>{
+    console.log("App listening on port 4000")
 })
