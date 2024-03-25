@@ -41,7 +41,7 @@ body {
 
 .welcomeborder p{
     margin-top: 5px;
-    margin-left: 52px;
+    margin-left: 50px;
 }
 
 .loginpage{
@@ -69,17 +69,17 @@ body {
 
 .login-popup .login-pwborder {
     display: flex;
-    padding: 70px;
-    margin-left: 40px;
+    padding: 30px;
+    
     flex-direction: column;  
     justify-content: space-around;
 }
 
 form .inputborder{
-    width: 140%;
-    height: 70px;
-    padding: 20px;
-    margin-top: 15px;
+    width: 170%;
+    height: 60px;
+    padding: 10px;
+    margin-top: 10px;
     position: relative;
     border-radius: 30px;
     display: flex;    
@@ -120,7 +120,7 @@ button {
     width: 90%;
     height: 40px;
     margin-top: 15px;
-    margin-left: 55px;
+    margin-left: 60px;
     background: linear-gradient(230deg, #f902ff, #00dbdf);
     border-radius: 30px;
     cursor: pointer;
@@ -137,10 +137,12 @@ button {
 .signupbox label {
     font-size: 0.7rem;
     text-align: center;
-    margin-left: 37px;
+    margin-top: 20px;
+    
+    margin-left: 40px;
 }
 
 .signupbox{
-    width: 155%;
+    width: 150%;
 }
 
