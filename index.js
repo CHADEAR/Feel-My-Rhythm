@@ -23,7 +23,6 @@ app.get('/', registerController)
 app.get('/register', registerController)
 app.get('/login', loginController)
 app.get('/home', homeController)
-app.get('/aboutus', aboutusController)
 
 // app.get('/about', aboutController)
 app.listen(8000, () =>{
