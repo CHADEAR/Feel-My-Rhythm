@@ -118,8 +118,6 @@ h1 {
     width: 150px;
     height: auto;
     flex-direction: row;
-    
-    
 }
 .eachmember .namebox {
     flex-direction: column;   
