@@ -23,7 +23,14 @@ app.get('/', registerController)
 app.get('/register', registerController)
 app.get('/login', loginController)
 app.get('/home', homeController)
-
+app.get('/about', (_req,res) => {
+    res.render('aboutUs');
+  });
+  
+app.post('/about', (_req,res) => {
+    res.redirect('/');
+});
+  
 // app.get('/about', aboutController)
 app.listen(8000, () =>{
     console.log("App listening on port 8000")

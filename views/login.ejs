@@ -30,7 +30,7 @@
                                     <input type="password" id="passWord" required>
                                     <label>password</label>
                                 </div>
-                                <a href="#" >Forgot Password ?</a>                        
+                                <label id="fgpassWord" >Forgot Password ?</label>                        
                                 <div class="submitborder">
                                     <a href="/homePage"></a><button type="submit" id="submit">Login</button></a>
                                 <div class="signupbox">
@@ -46,7 +46,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
         import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
-        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+        import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyAw-wiM0LM3KRCZXJUYfXfWmZObK0o6U0Y",
@@ -66,6 +66,7 @@
         let email = document.getElementById("eMail");
         let password = document.getElementById("passWord");
         let loginForm = document.getElementById("login-form");
+        let forgotPW = document.getElementById("fgpassWord");
 
         let SignInUser = evt => {
             evt.preventDefault();
@@ -91,7 +92,20 @@
                 // ..
             })
         }
+
+        let ForgotPassword = () => {
+            sendPasswordResetEmail(auth, email.value)
+            .then(() => {
+                alert("Password Reset Link has been sent to your email")
+            })
+            .catch ((error) => {
+                console.log(error.code);
+                console.log(error.message);
+            })
+        }
         loginForm.addEventListener('submit', SignInUser);
+        forgotPW.addEventListener('click',ForgotPassword);
+
       </script>  
 </body>
 </html>
