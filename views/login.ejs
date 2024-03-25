@@ -8,40 +8,90 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="login.css">
 
+
 </head>
 <body>
     <div class="cont">
-        <form action="/login" method="post">
-            <!-- <%- include('navbar') %> -->
+        <form id=login-form action="/login" method="post">
+            
                 <div class="login-popup">
                     <div class="loginpage">
                         <div class="welcomeborder" >
                             <h1>Welcome Back!</h1>
-                            <p>Please log in using your personal <br>information to stay connected.</p>
+                            <p>Please log in, using your personal information <br> to stay connected.</p>
                         </div>
                             <div class="login-pwborder">
                                 <h1>Login</h1>
                                 <div class="inputborder">
-                                    <input type="text" required>
-                                    <label>username</label>
+                                    <input type="text" id="eMail" required>
+                                    <label>email</label>
                                 </div>
                                 <div class="inputborder">
-                                    <input type="password" required>
+                                    <input type="password" id="passWord" required>
                                     <label>password</label>
                                 </div>
                                 <a href="#" >Forgot Password ?</a>                        
                                 <div class="submitborder">
-                                    <button type="submit">Login</button></div>
+                                    <a href="/homePage"></a><button type="submit" id="submit">Login</button></a>
                                 <div class="signupbox">
                                     <label>Don't have an account ?</label>
-                                    <a href="/">Signup</a>
+                                    <a href="/register">Signup</a>
                                 </div> 
                             </div>        
         
                     </div>
                 </div>      
             </form>
-    </div>   
+    </div> 
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAw-wiM0LM3KRCZXJUYfXfWmZObK0o6U0Y",
+            authDomain: "feelmyrhythm-test00.firebaseapp.com",
+            projectId: "feelmyrhythm-test00",
+            storageBucket: "feelmyrhythm-test00.appspot.com",
+            messagingSenderId: "57337594654",
+            appId: "1:57337594654:web:74fd92c2553960428cff0f",
+            measurementId: "G-7G4917TZWB"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore();
+        const auth = getAuth(app);
+
+
+        let email = document.getElementById("eMail");
+        let password = document.getElementById("passWord");
+        let loginForm = document.getElementById("login-form");
+
+        let SignInUser = evt => {
+            evt.preventDefault();
+            signInWithEmailAndPassword(auth, email.value, password.value)
+            .then(async(credentials) => {
+            // Signed up 
+            var ref = doc(db, "UserAuthList", credentials.user.uid);
+            const docSnap = await getDoc(ref);
+                if(docSnap.exists()){
+                    sessionStorage.setItem("user-info", JSON.stringify({
+                        userName: docSnap.data().user,
+                        name: docSnap.data().name
+                    }))
+                    sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
+                    alert("Logging in....");
+                    window.location.href = "/home";
+                }
+            })
+            .catch ((error) => {
+                console.log(error.code);
+                console.log(error.message);
+                alert(error.Message);
+                // ..
+            })
+        }
+        loginForm.addEventListener('submit', SignInUser);
+      </script>  
 </body>
 </html>
-

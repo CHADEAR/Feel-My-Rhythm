@@ -20,6 +20,7 @@ app.use(expressSession({
 app.set('view engine', 'ejs')
 
 app.get('/', registerController)
+app.get('/register', registerController)
 app.get('/login', loginController)
 app.get('/home', homeController)
 
